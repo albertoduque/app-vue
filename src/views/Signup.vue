@@ -1,35 +1,20 @@
 <template>
   <div>
-    <h2>Signup Page</h2>
-    <form @submit="register">
-      <div>
-          <input  type="text" placeholder="Name" v-model="name">
-      </div>
-      <div>
-          <input placeholder="Your email" type="email" v-model="email">
-      </div>
-      <div>
-          <input placeholder="Password" type="password" v-model="password">
-      </div>
-      <div>
-          <input placeholder="Confirm password" type="password" v-model="password2">
-      </div>
-      <div>
-          <button type="submit">Register</button>
-      </div>
-    </form>
+    <b-table striped hover :items="items"></b-table>
   </div>
 </template>
 
 
 <script>
   export default {
-    data(){
+    data() {
       return {
-        name : "",
-        email : "",
-        password : "",
-        password2 : ""
+        items: [
+          { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
+          { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
+          { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
+          { age: 38, first_name: 'Jami', last_name: 'Carney' }
+        ]
       }
     },
     methods: {

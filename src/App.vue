@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> | 
-      <router-link to="/signup">Signup</router-link> |
-      <router-link to="/login">Login</router-link>      
-    </div>
+      <b-navbar toggleable="lg" type="dark" variant="success">
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+              <b-nav-item href="signup" to="signup">Explore</b-nav-item>
+              <b-nav-item href="login" to="login">Explore</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>  
     <router-view/>
   </div>
 </template>
@@ -24,6 +28,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
